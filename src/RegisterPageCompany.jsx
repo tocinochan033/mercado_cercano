@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './components/header';
 import App from './App';
 
-function RegisterPage() {
+function RegisterPageCompany() {
   return (
     <div className="app">
       {/* Usamos el Header con la variante 'landing' para mostrar los botones de navegación */}
@@ -11,22 +11,18 @@ function RegisterPage() {
       <div className="registerPage__container">
         <div className="registerPage__card">
           
-          <h2 className="registerPage__title">Registro de Candidato</h2>
-          <p className="registerPage__subtitle">Crea tu perfil profesional para encontrar oportunidades</p>
+          <h2 className="registerPage__title">Registro de local</h2>
+          <p className="registerPage__subtitle">Crea tu pequeño emprendimiento para encontrar oportunidades</p>
           
-          <h3 className="registerPage__section-title">Información personal</h3>
+          <h3 className="registerPage__section-title">Información de la empresas</h3>
           <p className="registerPage__section-subtitle">Completa los datos para crear tu cuenta</p>
           
           <form className="registerPage__form">
             {/* Fila: Nombre y Apellido */}
             <div className="form__row">
               <div className="form__group">
-                <label htmlFor="nombre">Nombre</label>
+                <label htmlFor="nombre">Nombre de la empresa</label>
                 <input type="text" id="nombre" name="nombre" />
-              </div>
-              <div className="form__group">
-                <label htmlFor="apellido">Apellido</label>
-                <input type="text" id="apellido" name="apellido" />
               </div>
             </div>
 
@@ -37,14 +33,14 @@ function RegisterPage() {
                 <input type="password" id="contrasena" name="contrasena" />
               </div>
               <div className="form__group">
-                <label htmlFor="confirmar">Confirmar</label>
+                <label htmlFor="confirmar">Confirmar Contraseña</label>
                 <input type="password" id="confirmar" name="confirmar" />
               </div>
             </div>
             
             {/* Fila: Correo */}
             <div className="form__group full-width">
-              <label htmlFor="correo">Correo</label>
+              <label htmlFor="correo">Correo electronico</label>
               <input type="email" id="correo" name="correo" />
             </div>
             
@@ -56,13 +52,13 @@ function RegisterPage() {
 
             {/* Fila: Sobre ti (Textarea) */}
             <div className="form__group full-width">
-              <label htmlFor="sobreti">Sobre ti</label>
+              <label htmlFor="sobreti">Sobre tu empresa</label>
               <textarea id="sobreti" name="sobreti" rows="4"></textarea>
             </div>
             
             {/* Botón de envío */}
             <button type="submit" className="btn btn--submit full-width">
-              Crear cuenta de candidato
+              Crear cuenta de tu empresa local
             </button>
           </form>
         </div>
@@ -71,4 +67,4 @@ function RegisterPage() {
   );
 }
 
-export default RegisterPage;
+export default RegisterPageCompany;

@@ -12,7 +12,7 @@ function HomePage(){
             <Header variant="landing" /> 
 
             <div className="app__body__homePage">
-                <h1>El portal de empleos para tu comunidad local</h1>
+                <h1>Buscar negocios. input loresum</h1>
                 
                 <p>Conectamos empresas locales con talento de la zona.</p>
                 <p>Encuentra oportunidades cerca de ti o publica ofertas para tu negocio.</p>
