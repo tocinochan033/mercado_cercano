@@ -42,7 +42,6 @@
 }
 
 /* App.css */
-
 /* Estilos de la página principal */
 .app__body {
     display: flex;
@@ -54,11 +53,90 @@
     margin: 0 auto; /* Importante para el centrado */
 }
 
-.app__body__home__page{
+.app__body__homePqage{
     display: contents;
     justify-content: center;
     gap: 150px;
     margin: 0 auto;
+}
+
+/* --- ESTILOS DE BOTONES (GENERALES) --- */
+.btn {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.btn--signin {
+    color: #0073b1; /* Azul de LinkedIn */
+    background: none;
+    border-color: #0073b1;
+    margin-right: 10px;
+}
+
+.btn--register, .btn--primary {
+    background-color: #58c0a8; /* Color verde/azul de la imagen */
+    color: white;
+    border: none;
+}
+
+/* --- ESTILOS DE HEADER (LANDING) --- */
+
+.header__content--landing {
+    /* Distribuye el logo a la izquierda y los botones a la derecha */
+    justify-content: space-between; 
+    align-items: center;
+}
+
+/* --- ESTILOS DE LANDING PAGE BODY --- */
+
+.app__body__homePage {
+    /* Corrige el layout para que el centrado funcione */
+    display: flex; 
+    flex-direction: column; /* Apila el contenido verticalmente */
+    align-items: center; /* Centra horizontalmente el contenido hijo */
+    text-align: center; /* Centra el texto */
+    padding: 50px 20px;
+    max-width: 900px; /* Limita el ancho del texto */
+    margin: 0 auto; /* Centra el contenedor completo */
+    background-color: white;
+}
+
+.app__body__homePage h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.app__body__homePage p {
+    font-size: 18px;
+    color: black;
+}
+
+/* --- ESTILOS DE TARJETAS (LANDING) --- */
+
+.homePage__cards-container {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+    color: #000;
+}
+
+.homePage__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 40px;
+    width: 250px;
+    box-shadow: 0 4px 12px rgba(243, 242, 242, 0.1);
+    border: 1px solid #ddd;
+}
+
+.card__icon {
+    font-size: 40px;
+    margin-bottom: 15px;
 }
 
 /* Estilos del Header */
