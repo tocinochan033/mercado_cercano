@@ -54,6 +54,13 @@
     margin: 0 auto; /* Importante para el centrado */
 }
 
+.app__body__home__page{
+    display: contents;
+    justify-content: center;
+    gap: 150px;
+    margin: 0 auto;
+}
+
 /* Estilos del Header */
 .header {
     position: absolute;
@@ -168,7 +175,6 @@
     flex: 0.55; /* Proporción: 55% del espacio disponible (la más grande) */
     min-width: 550px; /* Un tamaño base decente */
     /*max-width: 750px;*/
-    
 }
 
 .feed__inputContainer {
