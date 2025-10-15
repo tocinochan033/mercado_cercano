@@ -1,0 +1,273 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* App.css */
+
+/* Estilos de la página principal */
+.app__body {
+    display: flex;
+    justify-content: center;
+    gap: 100px; 
+    padding: 30px 30px 30px 20px; /* Ajuste el padding para no limitar el ancho */
+    /*background-color: #f3f2ef; 
+ /* Asegura que el cuerpo respete el mismo ancho máximo */
+    margin: 0 auto; /* Importante para el centrado */
+}
+
+/* Estilos del Header */
+.header {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    padding: 10px 0;
+    box-shadow: 0 1px 0 rgba(255, 0, 0, 0.08);
+    z-index: 1000;
+}
+
+.header__content {
+    display: flex;
+    width: 90%; 
+    /* Aumentar dramáticamente el límite para pantallas grandes, o eliminarlo */
+    max-width: 1600px; /* Cambiado de 1100px a 1600px */
+    /* Asegúrate de que el header esté centrado en la ventana */
+    margin: 0 auto; 
+}
+
+.header__search {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    border-radius: 4px;
+    background-color: #eef3f8;
+    max-width: 300px;
+    margin-left: 8px;
+}
+
+.header__search > input {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 14px;
+    margin-left: 8px;
+    width: 100%;
+}
+
+.header__search-icon {
+    /* Aquí podrías usar un icono */
+    color: gray;
+}
+
+.header__logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0a66c2; /* Color de LinkedIn */
+    margin-right: 20px;
+}
+
+/* Estilos de las Tarjetas/Cajas */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+/* Estilos de Sidebar (Columna Izquierda) */
+.sidebar {
+    position: sticky;
+    top: 80px; 
+    flex: 0.22; /* Proporción: 22% del espacio disponible */
+    min-width: 250px; /* En lugar de max-width, usa min-width para evitar que se colapse */
+    /* REMOVER: max-width: 300px; */ 
+}
+
+.sidebar__profile-header {
+    height: 60px;
+    background-color: #0073b1; /* Color de banner */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.sidebar__profile-info {
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 10px;
+    margin-top: -30px; /* Mueve la info hacia arriba sobre el banner */
+}
+
+.sidebar__profile-info > h4 {
+    margin: 5px 0;
+}
+
+.sidebar__avatar {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 3px solid white;
+    background-color: gray; /* Simula la imagen */
+    margin: 0 auto;
+}
+
+.sidebar__links {
+    text-align: left;
+    padding: 10px;
+}
+
+.sidebar__link {
+    font-size: 14px;
+    color: gray;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+/* Estilos de Feed (Columna Central) */
+.feed {
+    flex: 0.55; /* Proporción: 55% del espacio disponible (la más grande) */
+    min-width: 550px; /* Un tamaño base decente */
+    /*max-width: 750px;*/
+    
+}
+
+.feed__inputContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.feed__input {
+    border: 1px solid lightgray;
+    border-radius: 30px;
+    padding: 10px 15px;
+    outline: none;
+    font-size: 14px;
+}
+
+.post {
+    display: flex;
+    padding: 15px;
+}
+
+.post__avatar {
+    height: 50px;
+    width: 50px;  
+    border-radius: 50%;
+    background-color: lightgray;
+    margin-right: 10px;
+}
+
+.post__body {
+    flex: 1;
+    
+}
+
+.post__header > h4 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.post__description {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Estilos de Widgets (Columna Derecha) */
+.widgets {
+    position: sticky;
+    top: 80px;
+    flex: 0.23; /* Proporción: 23% restante */
+    min-width: 250px; 
+    /* REMOVER: max-width: 300px; */ 
+}
+
+.widgets__item {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.widgets__icon {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: lightgray;
+    margin-right: 10px;
+}
+
+/* Estilos de ChatWidget (Widget Flotante) */
+.chatWidget {
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    width: 250px;
+    z-index: 1000;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.chatWidget__header {
+    padding: 10px;
+    background-color: #0a66c2;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatWidget__content {
+    height: 300px;
+    padding: 10px;
+    overflow-y: scroll;
+    display: none; /* Inicialmente oculto */
+}
+
+/* Clase para mostrar el contenido */
+.chatWidget__content.open {
+    display: block;
+}
