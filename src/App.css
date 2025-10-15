@@ -355,3 +355,113 @@
 .chatWidget__content.open {
     display: block;
 }
+
+/* --- REGISTRO Y LOGIN: CONTENEDORES --- */
+
+.registerPage__container, .loginPage__container {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.registerPage__card, .loginPage__card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 700px; /* Limita el ancho del formulario */
+}
+
+/* --- REGISTRO Y LOGIN: TÍTULOS Y TEXTO --- */
+
+.registerPage__title, .loginPage__title {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.registerPage__subtitle, .loginPage__subtitle {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.registerPage__section-title {
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.registerPage__section-subtitle {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.loginPage__forgot {
+    text-align: center;
+    font-size: 14px;
+    color: #0073b1;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+/* --- ESTILOS DE FORMULARIO --- */
+
+.registerPage__form, .loginPage__form {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+    gap: 20px;
+}
+
+.form__row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.form__group {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Permite que los grupos dentro de la fila ocupen espacio equitativamente */
+}
+
+.form__group.full-width {
+    flex: 0 0 100%; /* Ocupa todo el ancho */
+}
+
+.form__group label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+.form__group input, .form__group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form__group input:focus, .form__group textarea:focus {
+    border-color: #0073b1;
+    outline: none;
+}
+
+/* Estilo del botón de envío */
+.btn--submit {
+    background-color: #58c0a8; /* Color verde/azul */
+    color: white;
+    font-size: 18px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 10px;
+}
