@@ -288,11 +288,13 @@
 }
 
 .post__header > h4 {
+    text-align: left;
     margin: 0;
     font-size: 16px;
 }
 
 .post__description {
+    text-align: left;
     font-size: 14px;
     margin-top: 5px;
 }
@@ -345,10 +347,11 @@
 }
 
 .chatWidget__content {
+    text-align: left;
     height: 300px;
     padding: 10px;
     overflow-y: scroll;
-    display: none; /* Inicialmente oculto */
+    display: none;
 }
 
 /* Clase para mostrar el contenido */

@@ -7,6 +7,7 @@ function Feed() {
   const posts = [
     { id: 1, title: 'Empresa', body: 'elwkgh...hwieofw' },
     { id: 2, title: 'Empresa', body: 'elwkgh...hwieofw' },
+    { id: 3, title: 'Sony', body: 'cuerpo del texto'},
   ];
 
   return (

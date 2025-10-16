@@ -8,7 +8,6 @@ function Post({ title, body }) {
       <div className="post__body">
         <div className="post__header">
           <h4>{title}</h4>
-          <p>Empresa</p>
         </div>
         <div className="post__description">
           <p>{body}</p>
