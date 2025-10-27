@@ -12,7 +12,7 @@ function Post({ title, body }) {
         <div className="post__description">
           <p>{body}</p>
         </div>
-        {/* Aquí irían botones de Like, Comentar, Compartir */}
+        {/* Aquí irían botones de like, comentar, compartir si es que hay alch*/}
       </div>
     </div>
   );

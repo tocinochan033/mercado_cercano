@@ -5,7 +5,7 @@ import App from './App';
 function RegisterPageUser() {
   return (
     <div className="app">
-      {/* Usamos el Header con la variante 'landing' para mostrar los botones de navegación */}
+      {/* variante del header */}
       <Header variant="landing" /> 
 
       <div className="registerPage__container">

@@ -15,7 +15,7 @@ function Feed() {
       {/* Componente para Publicar */}
       <div className="card feed__inputContainer">
         <input className="feed__input" type="text" placeholder="Qué quieres compartir en la red?" />
-        {/* Aquí irían los iconos de adjuntar */}
+        {/* Aquí irían los iconos de adjuntar o no se alch */}
       </div>
 
       {/* Lista de Publicaciones */}
