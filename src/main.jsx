@@ -5,9 +5,11 @@ import App from './App.jsx'
 import HomePage from './HomePage.jsx'
 import RegisterPageCompany from './RegisterPageCompany.jsx'
 import LoginPage from './LoginPage.jsx'
+import RegisterPageUser from './RegisterPageUser.jsx'
+import FeedUI from './FeedUI.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <HomePage/>
+    <RegisterPageCompany/>
   </StrictMode>,
 )

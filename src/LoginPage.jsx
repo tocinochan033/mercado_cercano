@@ -10,7 +10,7 @@ function LoginPage() {
       <div className="loginPage__container">
         <div className="loginPage__card">
           <h2 className="loginPage__title">Iniciar Sesión</h2>
-          <p className="loginPage__subtitle">Ingresa tus credenciales para acceder</p>
+          <p className="loginPage__subtitle">Ingresa tus credenciales para acceder</p>p
 
           <form className="loginPage__form">
             
