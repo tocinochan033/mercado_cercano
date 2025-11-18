@@ -1,9 +1,7 @@
 import React from "react";
-// Importar el CSS de la Landing Page (si es diferente) o el general
-import './App.css'; // Asegúrate de que este es el CSS correcto
+import './App.css';
 
-//components
-import Header from "./components/header"; // Asegúrate de que la ruta sea correcta
+import Header from "./components/header";
 
 function HomePage(){
     return(

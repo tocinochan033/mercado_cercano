@@ -28,7 +28,7 @@ function RegisterPageUser({ navigate }) {
         }
 
         try {
-            // PASO 1: Registrar al usuario en el sistema de autenticación (auth.users)
+            //Registrar al usuario en el sistema de autenticación (auth.users)
             const { data: authData, error: authError } = await supabase.auth.signUp({
                 email,
                 password,
@@ -39,9 +39,8 @@ function RegisterPageUser({ navigate }) {
             const userId = authData.user?.id;
             
             if (userId) {
-                // PASO 2: LLAMAR A LA FUNCIÓN DE POSTGRES (RPC) EN LUGAR DEL INSERT DIRECTO
                 const { error: rpcError } = await supabase.rpc('handle_new_user_signup', {
-                    new_user_id: userId, // UUID del nuevo usuario
+                    new_user_id: userId, // UUID del usuario
                     new_nombre: nombre,
                     new_apellido: apellido,
                     new_email: email,
@@ -53,7 +52,7 @@ function RegisterPageUser({ navigate }) {
                 if (rpcError) throw rpcError;
 
                 alert('Registro de candidato exitoso.');
-                // ... (Redirección)
+                // ... (aqui se tiene que redirecionar)
                 
             } else {
                 // Este error ocurre si el usuario necesita confirmar correo
@@ -62,6 +61,7 @@ function RegisterPageUser({ navigate }) {
 
         } catch (error) {
             // ... (Manejo de errores) ...
+            //no hay ninguno xd
         } finally {
             setLoading(false);
         }

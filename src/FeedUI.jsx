@@ -1,7 +1,8 @@
 // src/components/FeedUI.jsx
 
 import React from 'react';
-// Importa los componentes de la vista del feed
+
+
 import Header from './components/header.jsx';
 import Sidebar from './components/Sidebar.jsx';
 import Feed from './components/Feed.jsx';
@@ -9,7 +10,7 @@ import Widgets from './components/Widget.jsx';
 import ChatWidget from './components/ChatWidget.jsx';
 
 // El componente FeedUI ahora representa la vista de 3 columnas
-function FeedUI({ navigate }) { // Acepta la función navigate
+function FeedUI({ navigate }) {
   return (
     <>
       {/* Usar el Header principal (sin variante 'landing') */}

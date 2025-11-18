@@ -1,7 +1,6 @@
 // src/components/Header.jsx
 import React from 'react';
 
-// Acepta una prop 'variant' para determinar qué contenido renderizar
 function Header({ variant }) {
   // Contenido específico de la Landing Page
   const landingContent = (

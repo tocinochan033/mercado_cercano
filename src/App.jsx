@@ -6,10 +6,10 @@ import React from 'react';
 import Header from './components/header.jsx';
 import Sidebar from './components/Sidebar.jsx';
 import Feed from './components/Feed.jsx';
-import Widgets from './components/Widget.jsx'; // Usando 'Widget.jsx' (singular)
+import Widgets from './components/Widget.jsx'; 
 import ChatWidget from './components/ChatWidget.jsx';
 
-function App() { // Cambiamos el nombre de la función a 'App'
+function App() {
   return (
     <div className="app">
       <Header />
