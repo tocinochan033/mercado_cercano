@@ -1,9 +1,12 @@
 import React from "react";
 import './App.css';
+import { useNavigate } from "react-router-dom";
 
 import Header from "./components/header";
 
 function HomePage(){
+    const navigate = useNavigate();
+
     return(
         <div className="app">
             {/* 1. Usar el Header con la variante 'landing' */}
@@ -20,14 +23,19 @@ function HomePage(){
                     <div className="card homePage__card">
                         <div className="card__icon">👤</div>
                         <h3>Busco Empleo</h3>
-                        <button className="btn btn--primary">Buscar empleo</button>
+                        <button 
+                            className="btn btn--primary"
+                            onClick={() => navigate("/RegisterPageUser")}
+                        >Buscar empleo</button>
                     </div>
 
                     {/* Tarjeta 2: Soy Empresa */}
                     <div className="card homePage__card">
                         <div className="card__icon">🏢</div>
                         <h3>Soy empresa</h3>
-                        <button className="btn btn--primary">Publicar ofertas</button>
+                        <button
+                            className="btn btn--primary"
+                            > Publicar ofertas</button>
                     </div>
                 </div>
             </div>

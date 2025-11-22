@@ -1,34 +1,21 @@
-import { useState } from 'react'
-import './App.css'
+import { Routes, Route } from "react-router-dom";
 
-import React from 'react';
-// Rutas de componentes: Van a la carpeta components (que está al lado)
-import Header from './components/header.jsx';
-import Sidebar from './components/Sidebar.jsx';
-import Feed from './components/Feed.jsx';
-import Widgets from './components/Widget.jsx'; 
-import ChatWidget from './components/ChatWidget.jsx';
+import HomePage from "./HomePage.jsx";
+import RegisterPageCompany from "./RegisterPageCompany.jsx";
+import RegisterPageUser from "./RegisterPageUser.jsx";
+import LoginPage from "./LoginPage.jsx";
+import FeedUI from "./FeedUI.jsx";
+import { NotFoundPage } from "./NotFoundPage.jsx";
 
-function App() {
+export default function App() {
   return (
-    <div className="app">
-      <Header />
-      
-      <div className="app__body">
-        {/* Columna Izquierda */}
-        <Sidebar />
-        
-        {/* Columna Central */}
-        <Feed />
-        
-        {/* Columna Derecha */}
-        <Widgets />
-      </div>
-
-      {/* Widget Flotante de Chat */}
-      <ChatWidget />
-    </div>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/RegisterPageUser" element={<RegisterPageUser />} />
+      <Route path="/RegisterPageCompany" element={<RegisterPageCompany />} />
+      <Route path="/LoginPage" element={<LoginPage />} />
+      <Route path="/FeedUI" element={<FeedUI />} />
+      <Route path="*" element={<NotFoundPage />} />
+    </Routes>
   );
 }
-
-export default App

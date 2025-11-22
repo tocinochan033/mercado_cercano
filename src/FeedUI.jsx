@@ -9,7 +9,6 @@ import Feed from './components/Feed.jsx';
 import Widgets from './components/Widget.jsx'; 
 import ChatWidget from './components/ChatWidget.jsx';
 
-// El componente FeedUI ahora representa la vista de 3 columnas
 function FeedUI({ navigate }) {
   return (
     <>
