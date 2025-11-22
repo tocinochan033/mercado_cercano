@@ -1,12 +1,17 @@
 // src/components/Header.jsx
-import React from 'react';
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Header({ variant }) {
+  const navigate = useNavigate();
+
   // Contenido específico de la Landing Page
   const landingContent = (
     <div className="header__landing-btns">
-      <button className="btn btn--signin">Iniciar Sesion</button>
-      <button className="btn btn--register">Registrarse</button>
+      <button 
+        className="btn btn--signin"
+        onClick={() => navigate("/LoginPage")}
+      >Iniciar Sesion</button>
     </div>
   );
 
