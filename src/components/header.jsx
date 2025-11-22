@@ -27,7 +27,7 @@ function Header({ variant }) {
   return (
     <div className="header">
       <div className={`header__content ${variant === 'landing' ? 'header__content--landing' : ''}`}>
-        <div className="header__logo">in</div>
+        <div className="header__logo">mc</div>
 
         {/* Lógica para mostrar el contenido correcto */}
         {variant === 'landing' ? landingContent : mainUIContent}

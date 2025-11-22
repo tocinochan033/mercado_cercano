@@ -2,7 +2,10 @@ import { supabase } from "../../supabaseClient";
 
 //registro de usuarios, pronto el de la empresa pero la cague y no puse algo en la base de datos que tendre que modificar un huevo
 //help me please 😎
+//actualizacion ya se implemento el registro de las empresas  HELLLL YEAHHHHH!!🔥🦅🔥🦅🦅🔥🦅🦅🦅🔥🦅🔥
 
+//--------------------------------------------------------------------------------------------------------------------------
+//registro de los usuarios (clientes normales)
 export async function registerUser({
     email,
     password,
@@ -44,8 +47,52 @@ export async function registerUser({
     }
 }
 
+//--------------------------------------------------------------------------------------------------------------------------
+//REGISTRO PARA LAS COMPAñIAS 
+
+export async function registerCompany({
+  nombre,
+  descripcion,
+  direccion,
+  correo,
+  contrasena
+}) {
+  try {
+    const { data: authData, error: authError } = await supabase.auth.signUp({
+      email: correo,
+      password: contrasena
+    });
+
+    if (authError) {
+      return { success: false, message: authError.message };
+    }
+
+    const userId = authData.user.id;
+
+    const { error: dbError } = await supabase.from("locales").insert([
+      {
+        idlocal: userId,
+        idrol: 1, // empresa
+        nombre,
+        descripcion,
+        direccion,
+        fecharegistro: new Date()
+      }
+    ]);
+
+    if (dbError) {
+      return { success: false, message: dbError.message };
+    }
+
+    return { success: true };
+  } catch (err) {
+    return { success: false, message: err.message };
+  }
+}
 
 
+//--------------------------------------------------------------------------------------------------------------------------
+//login de los usuarios (cliente/empresa)
 
 export async function loginUser(email, password) {
   try {

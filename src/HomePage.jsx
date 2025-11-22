@@ -35,7 +35,8 @@ function HomePage(){
                         <h3>Soy empresa</h3>
                         <button
                             className="btn btn--primary"
-                            > Publicar ofertas</button>
+                            onClick={() => navigate("/RegisterPageCompany")}
+                        > Publicar ofertas</button>
                     </div>
                 </div>
             </div>
